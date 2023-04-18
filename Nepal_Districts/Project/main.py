@@ -25,10 +25,7 @@ while correct <= 76:
                                        prompt="Whats the next district of Nepal?").lower()
 
     if answer_district == "exit":
-        not_got = []
-        for each in all_districts:
-            if each not in guessed_set:
-                not_got.append(each)
+        not_got = [district for district in all_districts if district not in guessed_set]
         break
 
     if answer_district in all_districts and answer_district not in guessed_set:
