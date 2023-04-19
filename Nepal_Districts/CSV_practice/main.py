@@ -39,13 +39,27 @@ data.to_csv("new_data.csv")
 print(data)
 """
 
-whole_data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
-color_list = whole_data["Primary Fur Color"].to_list()
-unique_list = list(set(color_list))
-outfile_data = {
-    "Fur Color": unique_list,
-    "Count": [color_list.count(color) for color in unique_list],
+# whole_data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+# color_list = whole_data["Primary Fur Color"].to_list()
+# unique_list = list(set(color_list))
+# outfile_data = {
+#     "Fur Color": unique_list,
+#     "Count": [color_list.count(color) for color in unique_list],
+# }
+# data = pandas.DataFrame(outfile_data)
+# data.to_csv("Count_to_Color.csv")
+#
+
+# Looping over Panda Dataframe
+student_dict = {
+    "student" : ["Angela", "James", "Lily"],
+    "score": [56,76,98]
 }
-data = pandas.DataFrame(outfile_data)
-data.to_csv("Count_to_Color.csv")
+
+student_data = pandas.DataFrame(student_dict)
+print(student_data)
+
+"""for index,row in  student_data.iterrows():
+    print(v.score)"""
+
 
